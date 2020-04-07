@@ -1,25 +1,27 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { IonicModule } from "@ionic/angular";
+import { FormsModule } from "@angular/forms";
+import { RouterModule } from "@angular/router";
 
-import { HomePage } from './home.page';
-import { MessageComponentModule } from '../message/message.module';
+import { HomePage } from "./home.page";
+import { MessageComponentModule } from "../message/message.module";
+import { SharedModule } from "../shared/shared.module";
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    SharedModule,
     MessageComponentModule,
     RouterModule.forChild([
       {
-        path: '',
-        component: HomePage
-      }
-    ])
+        path: "",
+        component: HomePage,
+      },
+    ]),
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
 })
 export class HomePageModule {}
